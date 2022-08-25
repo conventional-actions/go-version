@@ -1,0 +1,21 @@
+name: 'go-version'
+description: 'Set GOFLAGS to inject version information'
+author: 'Conventional Actions'
+inputs:
+  package:
+    required: false
+    description: 'go package to write to'
+    default: 'main'
+  variable:
+    required: false
+    description: 'the variable name to write the version to'
+    default: 'Version'
+  version:
+    required: true
+    description: 'version to write'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: flag
+  color: purple
