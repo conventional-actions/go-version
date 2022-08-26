@@ -40,7 +40,7 @@ async function run() {
         const variable = core.getInput('variable') || 'Version';
         core.debug(`variable = ${variable}`);
         const goFlags = process.env['GOFLAGS'] || '';
-        core.exportVariable('GOFLAGS', `${goFlags} -ldflags="-X '${pkg}.${variable}=${version}'"`);
+        core.exportVariable('GOFLAGS', `${goFlags} -ldflags=-X=${pkg}.${variable}=${version}`);
         return;
     }
     catch (error) {
