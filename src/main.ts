@@ -14,7 +14,7 @@ async function run(): Promise<void> {
     const goFlags = process.env['GOFLAGS'] || ''
     core.exportVariable(
       'GOFLAGS',
-      `${goFlags} -ldflags="-X '${pkg}.${variable}=${version}'"`
+      `${goFlags} -ldflags=-X=${pkg}.${variable}=${version}`
     )
     return
   } catch (error) {
