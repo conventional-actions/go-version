@@ -14,8 +14,8 @@ inputs:
     required: true
     description: 'version to write'
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: 'node24'
+  main: 'dist/index.cjs'
 branding:
   icon: flag
   color: purple
